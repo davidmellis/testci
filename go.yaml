@@ -1,4 +1,7 @@
 variables:
+
 steps:
   - script: echo '$(Build.BuildNumber)' ## output run number
+
+name: 'Test CI'
 
