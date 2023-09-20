@@ -1,0 +1,4 @@
+variables:
+steps:
+  - script: echo '$(Build.BuildNumber)' ## output run number
+
