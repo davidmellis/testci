@@ -8,5 +8,6 @@ name: 'Test CI'
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
-
+  trigger: true
+  batch: true
 - script: echo '$(Build.BuildNumber)' ## output run number
