@@ -8,13 +8,4 @@ jobs:
   pool: 
     vmImage:'ubuntu-latest'
   steps:
-  - script: echo 'hello'
-
-name: 'Test CI'
-trigger:
-  batch: true
-
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-- script: echo '$(Build.BuildNumber)' ## output run number
+  - script: echo hello
