@@ -5,7 +5,7 @@
 
 name: 'Test CI'
 trigger:
-  batch: true
+- batch: true
 
 steps:
 - script: echo Hello, world!
