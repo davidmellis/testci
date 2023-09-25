@@ -40,7 +40,7 @@ jobs:
     - task: DownloadBuildArtifacts@0
       displayName: 'Download Build Artifacts'
       inputs:
-        artifactName: iona-databricks
+        artifactName: bling
         downloadPath: $(System.DefaultWorkingDirectory)
 
 # jobs:
