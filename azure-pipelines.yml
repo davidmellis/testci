@@ -37,11 +37,11 @@ jobs:
             write-host "##vso[task.setvariable variable=aad_token;isoutput=true]$token"
         pwsh: true
 
-        # - task: DownloadBuildArtifacts@0
-        #   displayName: 'Download Build Artifacts'
-        #   inputs:
-        #     artifactName: iona-databricks
-        #     downloadPath: $(System.DefaultWorkingDirectory)
+    - task: DownloadBuildArtifacts@0
+      displayName: 'Download Build Artifacts'
+      inputs:
+        artifactName: iona-databricks
+        downloadPath: $(System.DefaultWorkingDirectory)
 
 # jobs:
 # - job: SetVersionNumber
