@@ -11,10 +11,10 @@ steps:
     ArtifactName: 'testci'
     publishLocation: 'Container'     
 
-jobs:
-- job: SetVersionNumber
-  steps:
-  - script: echo '$(Build.BuildNumber)'
-  - script: sed -i 's/$VERSION/$(Build.BuildId)/g' setup.cfg
-  - script: cat setup.cfg
+# jobs:
+# - job: SetVersionNumber
+#   steps:
+#   - script: echo '$(Build.BuildNumber)'
+#   - script: sed -i 's/$VERSION/$(Build.BuildId)/g' setup.cfg
+#   - script: cat setup.cfg
   
