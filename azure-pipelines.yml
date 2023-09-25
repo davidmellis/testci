@@ -9,3 +9,10 @@ jobs:
   - script: echo '$(Build.BuildNumber)'
   - script: sed -i 's/$VERSION/$(Build.BuildId)/g' setup.cfg
   - script: cat setup.cfg
+  
+- task: PublishBuildArtifacts@1
+  name: publish_wheel
+  inputs:
+    PathtoPublish: '$(System.DefaultWorkingDirectory)/dist/'
+    ArtifactName: 'testci'
+    publishLocation: 'Container'     
