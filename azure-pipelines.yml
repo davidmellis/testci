@@ -44,6 +44,10 @@ jobs:
       inputs:
         artifactName: 'bling.zip'
         downloadPath: $(System.DefaultWorkingDirectory)/
+        pipeline: '15934'
+        buildVersionToDownload: 'latest'
+        downloadType: 'specific'
+        itemPattern: '**/*.zip'
     - script: echo $(System.DefaultWorkingDirectory)
 
 # jobs:
