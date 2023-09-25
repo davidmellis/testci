@@ -3,8 +3,9 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
+steps:
 - task: PublishBuildArtifacts@1
-  name: publish_wheel
+  name: publish_bling
   inputs:
     PathtoPublish: '$(System.DefaultWorkingDirectory)/dist/'
     ArtifactName: 'testci'
