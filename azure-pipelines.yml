@@ -17,10 +17,10 @@ jobs:
   steps:
     - task: AzureKeyVault@2
       inputs:
-      azureSubscription: 'Vsts-Dealogic-DataScience-PIE'
-      KeyVaultName: 'databricks-iona-lib'
-      SecretsFilter: '*'
-      RunAsPreJob: true
+        azureSubscription: 'Vsts-Dealogic-DataScience-PIE'
+        KeyVaultName: 'databricks-iona-lib'
+        SecretsFilter: '*'
+        RunAsPreJob: true
     - task: PowerShell@2
       name: generateToken
       inputs:
