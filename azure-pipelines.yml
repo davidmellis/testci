@@ -3,6 +3,13 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
+- task: PublishBuildArtifacts@1
+  name: publish_wheel
+  inputs:
+    PathtoPublish: '$(System.DefaultWorkingDirectory)/dist/'
+    ArtifactName: 'testci'
+    publishLocation: 'Container'     
+
 jobs:
 - job: SetVersionNumber
   steps:
@@ -10,9 +17,3 @@ jobs:
   - script: sed -i 's/$VERSION/$(Build.BuildId)/g' setup.cfg
   - script: cat setup.cfg
   
-- task: PublishBuildArtifacts@1
-  name: publish_wheel
-  inputs:
-    PathtoPublish: '$(System.DefaultWorkingDirectory)/dist/'
-    ArtifactName: 'testci'
-    publishLocation: 'Container'     
