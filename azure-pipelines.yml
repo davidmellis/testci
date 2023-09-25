@@ -42,8 +42,9 @@ jobs:
     - task: DownloadBuildArtifacts@0
       displayName: 'Download Build Artifacts'
       inputs:
-        artifactName: bling.zip
+        artifactName: 'bling.zip'
         downloadPath: $(System.DefaultWorkingDirectory)/
+    - script: echo $(System.DefaultWorkingDirectory)
 
 # jobs:
 # - job: SetVersionNumber
