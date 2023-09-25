@@ -7,5 +7,5 @@ jobs:
 - job: SetVersionNumber
   steps:
   - script: echo '$(Build.BuildNumber)'
-  - script: sed -i 's/$VERSION/$(Build.BuildNumber)/g' setup.cfg
+  - script: sed -i 's/$VERSION/$(Build.BuildId)/g' setup.cfg
   - script: cat setup.cfg
