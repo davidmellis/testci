@@ -21,11 +21,11 @@ jobs:
       KeyVaultName: 'databricks-iona-lib'
       SecretsFilter: '*'
       RunAsPreJob: true
-        - task: PowerShell@2
-          name: generateToken
-          inputs:
-          targetType: inline
-          script: |
+    - task: PowerShell@2
+      name: generateToken
+      inputs:
+        targetType: inline
+        script: |
             $body = @{
               client_id="$(databricks-iona-lib-key)"
               grant_type="client_credentials"
@@ -35,7 +35,7 @@ jobs:
             $response = Invoke-WebRequest -Uri "https://login.microsoftonline.com/f685370c-0ace-4adf-8ba8-409a97536827/oauth2/v2.0/token" -Method Post -Body $body -ContentType application/x-www-form-urlencoded
             $token = ($response.Content | ConvertFrom-Json).access_token
             write-host "##vso[task.setvariable variable=aad_token;isoutput=true]$token"
-          pwsh: true
+        pwsh: true
 
         # - task: DownloadBuildArtifacts@0
         #   displayName: 'Download Build Artifacts'
