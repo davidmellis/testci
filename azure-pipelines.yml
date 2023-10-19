@@ -17,7 +17,9 @@ jobs:
         RunAsPreJob: true
 
 - job: build_artifact
+    pool: BLD-WEU-01
+    displayName: Bump Version, Build, Test the Artifact
     - task: Bash@3
-    - script: |
+    - script:
         pip install tox pytest-azurepipelines
         tox
