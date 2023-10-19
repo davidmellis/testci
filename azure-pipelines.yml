@@ -17,4 +17,5 @@ jobs:
       - task: Bash@3
         inputs:
           targetType: 'inline'
-          script: tox
+          script: git status
+                  tox
