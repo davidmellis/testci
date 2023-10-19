@@ -3,12 +3,7 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-# steps:
-jobs:
-- job: build_artifact
-  pool: BLD-WEU-01
-    displayName: 'Bump Version, Build, Test the Artifact amd Publish'
-  steps:
+steps:
   - task: Bash@3
     inputs:
       targetType: 'inline'
