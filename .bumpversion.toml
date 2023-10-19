@@ -3,6 +3,8 @@ commit = true
 tag = true
 current_version = 0.2.5
 
+[bumpversion:file:VERSION]
+
 [[files]]
 path = "pyproject.toml"
 search = 'version = "{current_version}"'
