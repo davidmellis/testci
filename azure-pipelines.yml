@@ -19,9 +19,4 @@ jobs:
 
     - task: BuildArtifact@tox
       name: build_artifact
-      jobs:
-        py37:
-          image: [linux]
-   
-
 
