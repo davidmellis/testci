@@ -5,9 +5,9 @@
 
 # steps:
 jobs:
-- job: create_aad_token
+- job: build_artifact
   pool: BLD-WEU-01
-  displayName: Create AAD token
+    displayName: 'Bump Version, Build, Test the Artifact amd Publish'
   steps:
     - task: AzureKeyVault@2
       inputs:
@@ -16,10 +16,5 @@ jobs:
         SecretsFilter: '*'
         RunAsPreJob: true
 
-- job: build_artifact
-    pool: BLD-WEU-01
-    displayName: Bump Version, Build, Test the Artifact
-    - task: Bash@3
-    - script:
-        pip install tox pytest-azurepipelines
-        tox
+    - bash: pip install tox pytest-azurepipelines
+            tox
