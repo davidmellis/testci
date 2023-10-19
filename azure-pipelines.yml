@@ -16,44 +16,12 @@ jobs:
         SecretsFilter: '*'
         RunAsPreJob: true
 
-    - task: PublishBuildArtifacts@1
-      name: publish_bling
-      inputs:
-        PathtoPublish: '$(System.DefaultWorkingDirectory)/dist/'
-        ArtifactName: 'bling.zip'
-        publishLocation: 'Container'     
 
-    - task: PowerShell@2
-      name: generateToken
-      inputs:
-        targetType: inline
-        script: |
-            $body = @{
-              client_id="$(databricks-iona-lib-key)"
-              grant_type="client_credentials"
-              scope="2ff814a6-3304-4ab8-85cb-cd0e6f879c1d/.default"
-              client_secret="$(databricks-iona-lib-secret)"
-            }
-            $response = Invoke-WebRequest -Uri "https://login.microsoftonline.com/f685370c-0ace-4adf-8ba8-409a97536827/oauth2/v2.0/token" -Method Post -Body $body -ContentType application/x-www-form-urlencoded
-            $token = ($response.Content | ConvertFrom-Json).access_token
-            write-host "##vso[task.setvariable variable=aad_token;isoutput=true]$token"
-        pwsh: true
+    - task: BuildArtifact@tox
+      name: build_artifact
+      jobs:
+        py37:
+          image: [linux]
+   
 
-    - task: DownloadBuildArtifacts@0
-      displayName: 'Download Build Artifacts'
-      inputs:
-        artifactName: 'bling.zipx'
-        downloadPath: $(System.DefaultWorkingDirectory)/
-        pipeline: '15934'
-        buildVersionToDownload: 'latest'
-        downloadType: 'specific'
-        itemPattern: '**/*.zip'
-    - script: echo $(System.DefaultWorkingDirectory)
 
-# jobs:
-# - job: SetVersionNumber
-#   steps:
-#   - script: echo '$(Build.BuildNumber)'
-#   - script: sed -i 's/$VERSION/$(Build.BuildId)/g' setup.cfg
-#   - script: cat setup.cfg
-  
