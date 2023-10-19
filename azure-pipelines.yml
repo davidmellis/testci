@@ -20,6 +20,10 @@ jobs:
 - job: build_artifact
   steps:
     - task: JavaToolInstaller@0
+       inputs:
+          versionSpec: '8'
+          jdkArchitectureOption: 'x64'
+          jdkSourceOption: 'PreInstalled'
     - bash: |
         pip install tox pytest-azurepipelines
         tox
