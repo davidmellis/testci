@@ -6,11 +6,11 @@ jobs:
   - job: Display_Version
     displayName: Run TOX 
     steps:
-     - task: Bash@3
+      - task: Bash@3
         inputs:
           targetType: 'inline'
           script: pip install tox pytest-azurepipelines
-     - task: Bash@3
+      - task: Bash@3
         inputs:
           targetType: 'inline'
           script: git status
