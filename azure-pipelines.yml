@@ -8,7 +8,9 @@ jobs:
         inputs:
           targetType: 'inline'
           workingDirectory: $(Build.Repository.LocalPath)
-          script: 
+          script:
+    	      git config --global user.email "davidmarkellis@yahoo.com"
+    	      git config --global user.name "David Ellis"
               pip install bumpversion && 
               bumpversion --allow-dirty --config-file=$(Build.Repository.LocalPath)/.bumpversion.toml  --list patch
       - task: Bash@3
