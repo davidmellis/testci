@@ -17,6 +17,10 @@ jobs:
         RunAsPreJob: true
 
 
-    - task: BuildArtifact@tox
-      name: build_artifact
+- job: build_artifact
+  steps:
+    step: build_and_test
+    - bash:
+      pip install tox pytest-azurepipelines
+      tox
 
