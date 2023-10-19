@@ -20,5 +20,5 @@ jobs:
           targetType: 'inline'
           workingDirectory: $(Build.Repository.LocalPath)
           script: 
-              pip install bumpversion
+              pip install bumpversion && 
               bumpversion --allow-dirty --config-file=$(Build.Repository.LocalPath)/.bumpversion.toml  --list patch
