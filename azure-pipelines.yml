@@ -12,4 +12,5 @@ jobs:
         name: tox
         inputs:
           targetType: 'inline'
+          workingDirectory: $(Build.Repository.LocalPath)
           script: tox
