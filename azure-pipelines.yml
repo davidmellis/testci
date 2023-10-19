@@ -4,6 +4,14 @@ jobs:
     displayName: Run TOX
     steps:
       - task: Bash@3
+        name: bump
+        inputs:
+          targetType: 'inline'
+          workingDirectory: $(Build.Repository.LocalPath)
+          script: 
+              pip install bumpversion && 
+              bumpversion --allow-dirty --config-file=$(Build.Repository.LocalPath)/.bumpversion.toml  --list patch
+      - task: Bash@3
         name: dependencies
         inputs:
           targetType: 'inline'
@@ -14,11 +22,3 @@ jobs:
           targetType: 'inline'
           workingDirectory: $(Build.Repository.LocalPath)
           script: tox
-      - task: Bash@3
-        name: bump
-        inputs:
-          targetType: 'inline'
-          workingDirectory: $(Build.Repository.LocalPath)
-          script: 
-              pip install bumpversion && 
-              bumpversion --allow-dirty --config-file=$(Build.Repository.LocalPath)/.bumpversion.toml  --list patch
