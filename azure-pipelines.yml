@@ -14,3 +14,9 @@ jobs:
           targetType: 'inline'
           workingDirectory: $(Build.Repository.LocalPath)
           script: tox
+      - task: Bash@3
+        name: tox
+        inputs:
+          targetType: 'inline'
+          workingDirectory: $(Build.Repository.LocalPath)
+          script: bumpversion --allow-dirty --config-file=$(Build.Repository.LocalPath)/.bumpversion.toml  --list patch
