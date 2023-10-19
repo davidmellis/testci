@@ -7,7 +7,8 @@ jobs:
     displayName: Run TOX 
     steps:
       - task: Bash@3
-        decription: Install dependencies for build
+        name: dependencies
+        displayName: Install dependencies for build
         inputs:
           targetType: 'inline'
           script: pip install tox pytest-azurepipelines
