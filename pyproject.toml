@@ -1,0 +1,8 @@
+[project]
+name="bling"
+version="0.0.5"
+
+[tool.setuptools.packages.find]
+where = ["src","tests"]  # list of folders that contain the packages (["."] by default)
+exclude = ["*tests*"]  # exclude packages matching these glob patterns (empty by default)
+namespaces = false  
