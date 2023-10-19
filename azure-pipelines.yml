@@ -1,6 +1,6 @@
 ---
 jobs:
-  - job: Display_Version
+  - job: Build_And_Test
     displayName: Run TOX
     steps:
       - task: Bash@3
