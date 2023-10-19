@@ -15,7 +15,7 @@ jobs:
           workingDirectory: $(Build.Repository.LocalPath)
           script: tox
       - task: Bash@3
-        name: tox
+        name: bump
         inputs:
           targetType: 'inline'
           workingDirectory: $(Build.Repository.LocalPath)
