@@ -9,6 +9,10 @@ jobs:
       - task: Bash@3
         inputs:
           targetType: 'inline'
+          script: git status
+      - task: Bash@3
+        inputs:
+          targetType: 'inline'
           script: pip install tox pytest-azurepipelines
       - task: Bash@3
         inputs:
