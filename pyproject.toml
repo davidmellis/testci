@@ -1,6 +1,10 @@
 [project]
-name="bling"
-version="0.0.5"
+  name="bling"
+  dynamic = ["version"]
+
+
+[tool.setuptools.dynamic]
+version = {file = ["VERSION"]}
 
 [tool.setuptools.packages.find]
 where = ["src","tests"]  # list of folders that contain the packages (["."] by default)
