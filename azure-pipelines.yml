@@ -15,7 +15,7 @@ jobs:
             git config --list --show-origin &&
             pip install bumpversion && 
             bumpversion --allow-dirty --commit --tag --config-file=$(Build.Repository.LocalPath)/.bumpversion.toml  --list patch &&
-            git push origin HEAD:main
+            git push davidmellis@origin HEAD:main
       - task: Bash@3
         name: dependencies
         inputs:
