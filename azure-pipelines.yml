@@ -12,7 +12,7 @@ jobs:
             git config --global user.email "davidmarkellis@yahoo.com" &&
             git config --global user.name "David Ellis" &&
             pip install bumpversion && 
-            bumpversion --allow-dirty --commit --tag --config-file=$(Build.Repository.LocalPath)/.bumpversion.toml  --list patch
+            bumpversion --allow-dirty --commit --tag --config-file=$(Build.Repository.LocalPath)/.bumpversion.toml  --list patch &&
             git push
       - task: Bash@3
         name: dependencies
