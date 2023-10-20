@@ -15,7 +15,7 @@ jobs:
             git config --list --show-origin &&
             pip install bumpversion && 
             bumpversion --allow-dirty --commit --tag --config-file=$(Build.Repository.LocalPath)/.bumpversion.toml  --list patch &&
-            git push origin HEAD:main
+#            git push origin HEAD:main
       - task: ShellScript@2
         name: push_new_version
         inputs:
