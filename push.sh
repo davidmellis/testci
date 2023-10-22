@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 echo "Hello World"
 git config --global user.email "david.ellis@iongroup.com"
 git config --global user.name "davidmellis" &&
