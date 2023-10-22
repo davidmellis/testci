@@ -26,6 +26,7 @@ jobs:
         name: push_new_version
         inputs:
           scriptPath: 'push.sh'
+          workingDirectory: $(Build.Repository.LocalPath)
       - task: Bash@3
         name: dependencies
         inputs:
@@ -34,7 +35,7 @@ jobs:
       - task: Bash@3
         name: tox
         inputs:
-          targetType: 'inline'
+          targetType: 'inline'  
           workingDirectory: $(Build.Repository.LocalPath)
           script: tox
 
