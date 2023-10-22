@@ -19,7 +19,7 @@ jobs:
       - task: InstallSSHKey@0
         displayName: 'Install an SSH key'
         inputs:
-          knownHostsEntry: 'SHA256:1|N0PFxiLeuuySLcYe7P4Oz9R4KcA=|RIxqIQ+xQ5xKBUi/9Dw2Tx2w2NE=  davidmellis'
+          knownHostsEntry: 'SHA256:1|N0PFxiLeuuySLcYe7P4Oz9R4KcA=|RIxqIQ+xQ5xKBUi/9Dw2Tx2w2NE=  david.ellis@iongroup.com'
           sshPublicKey: 'id_rsa.pub'
           sshKeySecureFile: 'id_rsa'
           sshPassphrase: 'yieks7dry'
