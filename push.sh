@@ -1,6 +1,9 @@
 #!/usr/bin/bash
 echo "Hello World"
-echo "Hello: $arg1"
+
+bumpfile="$arg1/.bumpversion.toml"
+
+echo "Hello: $bumpfile"
 git config --global user.email "david.ellis@iongroup.com"
 git config --global user.name "davidmellis"
 
@@ -14,5 +17,5 @@ git config --list --show-origin
 
 
 pip install bumpversion
-bumpversion --allow-dirty --commit --tag --config-file="$arg1/.bumpversion.toml" --list patch
+bumpversion --allow-dirty --commit --tag --config-file="$bumpfile" --list patch
 git push origin HEAD:main
