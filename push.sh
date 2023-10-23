@@ -3,7 +3,10 @@ echo "Hello World"
 git config --global user.email "david.ellis@iongroup.com"
 git config --global user.name "davidmellis"
 
-git remote add origin https://github.com/davidmellis/testci.git
+git remote add origin git@github.com:davidmellis/testci.git
+
+
+# https://github.com/davidmellis/testci.git
 
 # git config --global remote.origin.url=git@github.com:davidmellis/testci.git
 echo "Hello: $arg1"
