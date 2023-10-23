@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 echo "Hello World"
 
-bumpfile="$arg1/.bumpversion.toml"
+bumpfile="$1/.bumpversion.toml"
 
 echo "Hello: $bumpfile"
 git config --global user.email "david.ellis@iongroup.com"
