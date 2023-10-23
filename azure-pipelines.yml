@@ -25,6 +25,7 @@ jobs:
       - task: ShellScript@2
         name: push_new_version
         inputs:
+          targetType: 'filePath'
           scriptPath: 'push.sh'
           workingDirectory: $(Build.Repository.LocalPath)
       - task: Bash@3
