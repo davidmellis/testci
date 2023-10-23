@@ -1,7 +1,7 @@
 ---
 jobs:
   - job: Build_And_Test
-    displayName: Bump, Push and TOX
+    displayName: 'Bump, Push and TOX'
     steps:
      - task: InstallSSHKey@0
         displayName: 'Install an SSH key'
