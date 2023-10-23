@@ -14,8 +14,7 @@ jobs:
         name: push_new_version
         inputs:
           targetType: 'filePath'
-          scriptPath: "push.sh $(Build.Repository.LocalPath)"
-          workingDirectory: $(Build.Repository.LocalPath)
+          scriptPath: "$(Build.Repository.LocalPath)/push.sh"
       - task: Bash@3
         name: dependencies
         inputs:
