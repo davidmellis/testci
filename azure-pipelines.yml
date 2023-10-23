@@ -11,6 +11,7 @@ jobs:
           sshKeySecureFile: 'id_rsa'
           sshPassphrase: 'yieks7dry'
       - task: ShellScript@2
+        displayName: 'Bump version and Push Repo with no-ci - to stop it looping builds'
         name: push_new_version
         inputs:
           targetType: 'filePath'
@@ -23,6 +24,7 @@ jobs:
           script: pip install tox pytest-azurepipelines
       - task: Bash@3
         name: tox
+        displayName: 'Run TOX to test and build artifact'
         inputs:
           targetType: 'inline'  
           workingDirectory: $(Build.Repository.LocalPath)
