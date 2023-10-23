@@ -7,7 +7,6 @@ echo "Hello: $bumpfile"
 git config --global user.email "david.ellis@iongroup.com"
 git config --global user.name "davidmellis"
 
-git remote remove origin
 git remote set-url origin git@github.com:davidmellis/testci.git
 
 
