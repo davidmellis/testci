@@ -1,7 +1,7 @@
 [bumpversion]
 commit = true
 tag = true
-current_version = 0.0.45
+current_version = 0.0.46
 
 [bumpversion:file:VERSION]
 
