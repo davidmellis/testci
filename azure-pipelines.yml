@@ -16,7 +16,7 @@ jobs:
         inputs:
           targetType: 'filePath'
           scriptPath: "$(Build.Repository.LocalPath)/push.sh"
-          args: "$(Build.Repository.LocalPath) $(Build.BuildNumber)"
+          args: "$(Build.Repository.LocalPath) $(Build.BuildId)"
       - task: Bash@3
         name: dependencies
         inputs:
