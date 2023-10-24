@@ -1,7 +1,7 @@
 [bumpversion]
 commit = true
 tag = true
-current_version = 0.0.12
+current_version = 44.44.44
 message = 'Bump version: "{current_version}" → "{new_version}" ***NO_CI***'
 
 [bumpversion:file:VERSION]
