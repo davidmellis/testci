@@ -39,10 +39,13 @@
 {
   "event_type": "FundCeasedOperations",
     "fund_id": "JIMC",
-    "reason": "due to judicial injunction" | "due to regulatory action." | "of its own volition."
+    "reason": "due to judicial injunction" | "due to regulatory action." | "of its own volition.",
+    "effective_date": "27-10-2022"
+
 }
 
 {
   "event_type": "FundFullyInvested",
-    "fund_id": "JIMC"
+    "fund_id": "JIMC",
+    "effective_date": "27-10-2022"
 }
