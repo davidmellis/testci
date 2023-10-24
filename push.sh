@@ -14,5 +14,5 @@ git config --list --show-origin
 
 
 pip install bumpversion
-bumpversion --allow-dirty --commit --tag --config-file="$bumpfile" --list patch
+bumpversion --allow-dirty --commit --tag --config-file="$bumpfile" --new-version=$2 --list patch
 git push origin HEAD:main
