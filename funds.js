@@ -43,7 +43,7 @@
     "effective_date": "27-10-2022"
 
 }
-
++++
 {
   "event_type": "FundFullyInvested",
     "fund_id": "JIMC",
