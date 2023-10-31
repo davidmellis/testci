@@ -2,11 +2,27 @@
   name="bling"
   dynamic = ["version"]
 
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+change_version = "bling.cmdline:main"
 
 [tool.setuptools.dynamic]
 version = {file = ["VERSION"]}
 
 [tool.setuptools.packages.find]
-where = ["src","tests"]  # list of folders that contain the packages (["."] by default)
-exclude = ["*tests*"]  # exclude packages matching these glob patterns (empty by default)
-namespaces = false  
+where = ["src"]  # list of folders that contain the packages (["."] by default)
+include = ["*"]
+# exclude = ["*tests*"]  # exclude packages matching these glob patterns (empty by default)
+namespaces = true
+
+[tool.setuptools.packages]
+# find = {}
+
+[tool.setuptools]
+include-package-data = true
+
+# [tool.setuptools]
+# packages = ["src"]

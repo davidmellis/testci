@@ -1,9 +1,0 @@
-setup.cfg
-setup.py
-src/bling/cmdline.py
-src/bling/ring.py
-src/bling.egg-info/PKG-INFO
-src/bling.egg-info/SOURCES.txt
-src/bling.egg-info/dependency_links.txt
-src/bling.egg-info/entry_points.txt
-src/bling.egg-info/top_level.txt

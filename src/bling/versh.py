@@ -25,8 +25,8 @@ class VersionHolder:
     def rep(self) -> str:
         return str(self.version)
 
-    def bump(self, value):
-        v = self.parts.bump(value)
+    def bump(self, part):
+        v = self.parts.bump(part)
         return VersionHolder(self.parts.to_string())
 
     def set(self, part, vstr):
