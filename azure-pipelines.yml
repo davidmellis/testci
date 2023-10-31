@@ -28,6 +28,8 @@ jobs:
         inputs:
           targetType: 'inline'  
           workingDirectory: $(Build.Repository.LocalPath)
-          script: pip config --user set global.index-url http://18.170.223.248:8080/simple/
+          script: 
+                export HOME=$(Build.Repository.LocalPath)
+                && pip config --user set global.index-url http://18.170.223.248:8080/simple/
                 && pip config --user set global.trusted-host 18.170.223.248
                   && tox
