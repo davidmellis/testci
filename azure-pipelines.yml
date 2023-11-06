@@ -16,7 +16,6 @@ jobs:
           targetType: 'inline'
           script: pip install tox pytest-azurepipelines
       - task: Bash@3
-        dependsOn: exportbuildid
         name: setup
         displayName: 'Setup the stuff'
         inputs:
