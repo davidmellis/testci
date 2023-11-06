@@ -33,9 +33,8 @@ jobs:
           targetType: 'inline'  
           workingDirectory: $(Build.Repository.LocalPath)
           script: 
-                tox
-          args:
-              ${Build.BuildId}
+              export BUILD_ID=${Build.BuildId}
+              tox
       - task: Bash@3
         name: exportbuildid
         displayName: 'Export BuildId'
