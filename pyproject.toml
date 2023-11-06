@@ -3,7 +3,10 @@
   dynamic = ["version"]
 
 [build-system]
-requires = ["setuptools"]
+requires = [
+	"setuptools"
+	,"changeversion"
+]
 build-backend = "setuptools.build_meta"
 
 [project.scripts]
@@ -11,6 +14,7 @@ change_version = "bling.cmdline:main"
 
 [tool.setuptools.dynamic]
 version = {file = ["VERSION"]}
+dependencies = {file = ["requirements.txt"]}
 
 [tool.setuptools.packages.find]
 where = ["src"]  # list of folders that contain the packages (["."] by default)
