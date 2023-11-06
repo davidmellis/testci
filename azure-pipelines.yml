@@ -40,3 +40,13 @@ jobs:
           workingDirectory: $(Build.Repository.LocalPath)
           script: 
                 tox
+          args:
+              ${Build.BuildId}
+      - task: Bash@3
+        name: tox
+        displayName: 'export BuildId'
+        inputs:
+          targetType: 'inline'  
+          workingDirectory: $(Build.Repository.LocalPath)
+          script: 
+                export BUILD_ID=${Build.BuildId}
