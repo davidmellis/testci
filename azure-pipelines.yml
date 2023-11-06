@@ -16,6 +16,7 @@ jobs:
           targetType: 'inline'
           script: pip install tox pytest-azurepipelines
       - task: Bash@3
+        dependsOn: exportbuildid
         name: setup
         displayName: 'Setup the stuff'
         inputs:
@@ -37,7 +38,7 @@ jobs:
               ${Build.BuildId}
       - task: Bash@3
         name: exportbuildid
-        displayName: 'export BuildId'
+        displayName: 'Export BuildId'
         inputs:
           targetType: 'inline'  
           workingDirectory: $(Build.Repository.LocalPath)
