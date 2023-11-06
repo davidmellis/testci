@@ -43,7 +43,7 @@ jobs:
           args:
               ${Build.BuildId}
       - task: Bash@3
-        name: tox
+        name: export-buildid
         displayName: 'export BuildId'
         inputs:
           targetType: 'inline'  
