@@ -41,4 +41,4 @@ jobs:
           targetType: 'inline'  
           workingDirectory: $(Build.Repository.LocalPath)
           script: 
-                export BUILD_ID=${Build.BuildId}
+                export BUILD_ID=$(Build.BuildId)
