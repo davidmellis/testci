@@ -1,4 +1,4 @@
-echo "0.0.0" > VERSION
+echo "0.0.1" > VERSION
 python3 -m venv venv ~/.script
 source ~/.script/bin/activate
 pip install changeversion
@@ -12,4 +12,5 @@ git checkout refs/heads/main
 git add .
 changeversion --tag
 git status
+git pull --rebase origin main
 git push -u origin main
