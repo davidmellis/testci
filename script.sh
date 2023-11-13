@@ -1,4 +1,7 @@
-pip install --force-reinstall changeversion
+echo "0.0.0" > VERSION
+python3 -m venv venv ~/.script
+source ~/.script/bin/activate
+pip install changeversion
 pip list
 git config --global user.email "david.ellis@iongroup.com"
 git config --global user.name "David Ellis"
