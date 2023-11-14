@@ -7,10 +7,12 @@ git config --global --add safe.directory '*'
 git remote -v                                                   
 changeversion --bump micro 
 git checkout ref/heads/main 
-git add .
+# git add .
 git add VERSION
 changeversion --tag                                             
+
 git status                                                      
 git pull --rebase origin main
 git push -u origin main                                         
+
 
