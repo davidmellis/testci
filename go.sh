@@ -21,3 +21,6 @@ git status
 git pull --rebase origin main
 git push -u origin HEAD:main
 
+echo "PUSHING NOW COMPLETE"
+
+git show
