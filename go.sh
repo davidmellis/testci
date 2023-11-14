@@ -1,5 +1,5 @@
 pip config --user set global.index-url http://18.170.223.248:8080/
-pip install changeversion
+pip install --trusted-host=18.170.223.248 changeversion
 pip list
 ls -la ~/.local/bin/
 git config --global user.email "david.ellis@iongroup.com"       
