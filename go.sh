@@ -14,6 +14,5 @@ git add .
 git add VERSION
 ~/.local/bin/changeversion --tag                                             
 git status                                                      
-git pull --rebase origin main
+git pull --rebase -u origin main
 git push -u origin main
-
