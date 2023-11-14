@@ -1,4 +1,4 @@
-git branch -b
+git branch -a
 pip config --user set global.index-url http://18.170.223.248:8080/
 pip install --trusted-host=18.170.223.248 changeversion
 pip list
