@@ -1,7 +1,7 @@
 git remote -v 
 git branch -a
-pip config --user set global.index-url="http://18.170.223.248:8080/"
-pip config set global.trusted-host "18.170.223.248"
+pip config --global set index-url = "http://18.170.223.248:8080/"
+pip config set --global trusted-host ="18.170.223.248"
 pip install changeversion
 pip list
 git config --global user.email "david.ellis@iongroup.com"       
