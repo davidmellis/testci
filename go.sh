@@ -11,7 +11,7 @@ git config --global user.name "David Ellis"
 git remote set-url origin git@github.com:davidmellis/testci.git 
 git config --global --add safe.directory '*'                    
 git remote -v 
-changeversion --bump micro 
+changeversion --micro $BUILD_ID
 # git checkout ref/heads/main 
 git add .
 git add VERSION
