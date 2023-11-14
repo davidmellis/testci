@@ -13,7 +13,8 @@ changeversion --bump micro
 git add .
 git add VERSION
 changeversion --tag                                             
-git status                                                      
-git pull --rebase origin main
+git status                  
+git fetch origin main
+#git pull --rebase origin main
 git push -u origin main
 
