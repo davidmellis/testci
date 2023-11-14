@@ -1,5 +1,6 @@
 pip install changeversion                     
-pip list                                                        
+pip list
+ls -la ~/.local/bin/
 git config --global user.email "david.ellis@iongroup.com"       
 git config --global user.name "David Ellis"                     
 git remote set-url origin git@github.com:davidmellis/testci.git 
