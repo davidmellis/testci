@@ -1,7 +1,7 @@
 git remote -v 
 git branch -a
-pip config set global.index-url="http://18.170.223.248:8080/simplw/"
-pip config set global.trusted-host="18.170.223.248"
+pip config set global.index-url "http://18.170.223.248:8080/simplw/"
+pip config set global.trusted-host "18.170.223.248"
 cat ~/.config/pip/pip.conf
 pip install changeversion
 pip list
