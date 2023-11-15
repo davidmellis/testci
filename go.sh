@@ -19,7 +19,7 @@ git add VERSION
 git status                  
 #git fetch origin main
 git pull --rebase origin main
-git push -u origin HEAD:main
+git push --follow-tags  -u origin HEAD:main
 
 git log -n3
 
