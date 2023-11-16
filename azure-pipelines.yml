@@ -14,5 +14,5 @@ jobs:
         name: vvling
         inputs:
           targetType: 'inline'
-          script: export BUILD_ID=$(Build.BuildId) && tox
+          script: export BUILD_ID=$(Build.BuildId) && bash tag_and_push.sh && tox
 
