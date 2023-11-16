@@ -1,9 +1,11 @@
 ---
 jobs:
   - job: Build_And_Test
-    displayName: 'Bump, Push and TOX'
+    name: 'build_and_test'
+    displayName: 'Write New Version, Test, Build and Publish'
     steps:
       - task: InstallSSHKey@0
+        name: private_key
         displayName: "Install an SSH key"
         inputs:
           knownHostsEntry: 'SHA256:buDzZTkt42dcFjoSuKz3Hau8xzjdcC7YSBN5viSeU+c david.ellis@iongroup.com'

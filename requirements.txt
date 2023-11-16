@@ -2,3 +2,4 @@ tox
 changeversion
 gitpython
 pygithub
+twine-verify-upload
