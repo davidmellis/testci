@@ -11,7 +11,7 @@ jobs:
           sshKeySecureFile: 'ssh_private'
           sshPassphrase: 'yieks7dry'
       - task: Bash@3
-        name: vvling
+        name: tag_and_build
         inputs:
           targetType: 'inline'
           script: export BUILD_ID=$(Build.BuildId) && bash tag_and_push.sh && tox
