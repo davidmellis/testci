@@ -1,7 +1,7 @@
 ---
 jobs:
   - job: Build_And_Test
-    displayName: 'Write New Version, Test, Build and Publish'
+    displayName: 'Write New Version, Test, Build and Publish Artifact'
     steps:
       - task: InstallSSHKey@0
         name: private_key
