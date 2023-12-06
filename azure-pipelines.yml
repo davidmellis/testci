@@ -15,5 +15,15 @@ jobs:
         name: tag_and_build
         inputs:
           targetType: 'inline'
-          script: export BUILD_ID=$(Build.BuildId) && bash tag_and_push.sh && tox
+          script: export BUILD_ID=$(Build.BuildId)
+       - task: Bash@3
+        name: tag_and_build
+        inputs:
+          targetType: 'inline'
+          script: bash new_version.sh
+     - task: Bash@3
+        name: tag_and_build
+        inputs:
+          targetType: 'inline'
+          script: tox
 
