@@ -21,7 +21,7 @@ jobs:
         inputs:
           targetType: 'inline'
           script: bash new_version.sh
-     - task: Bash@3
+      - task: Bash@3
         name: tox
         inputs:
           targetType: 'inline'
