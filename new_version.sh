@@ -14,7 +14,7 @@ git config --global --add safe.directory '*'
 git remote -v 
 
 changeversion --micro $BUILD_ID
-hangeversion --tag
+changeversion --tag
 git add .
 git add VERSION
 git status                  
