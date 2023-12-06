@@ -21,6 +21,6 @@ git status
 git pull --rebase origin main
 git push --tags  -u origin HEAD:main
 
-git log -n3
+# git log -n3
 echo "PUSHING NOW COMPLETE"
 git show
