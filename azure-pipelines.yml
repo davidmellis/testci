@@ -12,17 +12,17 @@ jobs:
           sshKeySecureFile: 'ssh_private'
           sshPassphrase: $(ssh_passphrase)
       - task: Bash@3
-        name: tag_and_build
+        name: export
         inputs:
           targetType: 'inline'
           script: export BUILD_ID=$(Build.BuildId)
-       - task: Bash@3
-        name: tag_and_build
+      - task: Bash@3
+        name: new_version
         inputs:
           targetType: 'inline'
           script: bash new_version.sh
      - task: Bash@3
-        name: tag_and_build
+        name: tox
         inputs:
           targetType: 'inline'
           script: tox
