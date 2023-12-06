@@ -7,11 +7,11 @@ pip config set global.trusted-host "18.170.223.248"
 pip install changeversion
 pip list
 
-git config --global user.email "david.ellis@iongroup.com"       
-git config --global user.name "davidmellis" 
-git remote set-url origin git@github.com:davidmellis/testci.git 
-git config --global --add safe.directory '*'                    
-git remote -v 
+git config --global user.email "david.ellis@iongroup.com" 
+git config --global user.name "davidmellis"
+git remote set-url origin git@github.com:davidmellis/testci.git
+git config --global --add safe.directory '*' 
+git remote -v
 
 changeversion --micro $BUILD_ID
 changeversion --tag
