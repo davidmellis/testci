@@ -16,10 +16,10 @@ git remote -v
 changeversion --micro $BUILD_ID
 git add .
 git add VERSION
-changeversion --tag --push
+changeversion --tag
 git status                  
-#git pull --rebase origin main
-#git push --tags  -u origin HEAD:main
+git pull --rebase origin main
+git push --tags  -u origin HEAD:main
 
 git log -n3
 echo "PUSHING NOW COMPLETE"
