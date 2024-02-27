@@ -11,8 +11,6 @@ jobs:
     steps:
       - name: Checkout the action codebase
         uses: actions/checkout@v2
-      - name: Update!
-        uses: oshdev/npm-update-action@v1
       - name: Perform some test or something
         run: echo 'testing testing! 1! 2! 3!'
 
@@ -21,6 +19,5 @@ jobs:
     steps:
       - name: Checkout the action codebase
         uses: actions/checkout@v2
-      - name: Update!
       - name: Perform some test or something
         run: echo 'failing! 1! 2! 3!' && exit 1
