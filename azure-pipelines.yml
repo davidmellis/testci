@@ -12,12 +12,32 @@ jobs:
           sshKeySecureFile: 'ssh_private'
           sshPassphrase: $(passphrase)
       - task: Bash@3
-        name: new_version
+        name: build_one
         inputs:
           targetType: 'inline'
+<<<<<<< HEAD
           script: export BUILD_ID=$(Build.BuildId) && bash new_version.sh
       - task: Bash@3
         name: tox
         inputs:
+=======
+          script: 
+            bash ./bin/build_one.sh
+      - task: Bash@3
+        name: build_two
+        inputs:
+          targetType: 'inline'
+          script: 
+            bash ./bin/build_two.sh
+ 
+      - task: Bash@3
+        name: build_three
+        inputs:
+          targetType: 'inline'
+          script: 
+            bash ./bin/build_three.sh
+ 
+          inputs:
+>>>>>>> 07247ffb (david: add remaining build steps and setup to run in pipeline)
           targetType: 'inline'
           script: tox
