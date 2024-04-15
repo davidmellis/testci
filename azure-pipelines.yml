@@ -16,9 +16,8 @@ jobs:
         inputs:
           targetType: 'inline'
 <<<<<<< HEAD
-          script: export BUILD_ID=$(Build.BuildId) && bash new_version.sh
+          script: export BUILD_ID=$(Build.BuildId) 
       - task: Bash@3
-        name: tox
         inputs:
 =======
           script: 
@@ -37,7 +36,3 @@ jobs:
           script: 
             bash ./bin/build_three.sh
  
-          inputs:
->>>>>>> 07247ffb (david: add remaining build steps and setup to run in pipeline)
-          targetType: 'inline'
-          script: tox
